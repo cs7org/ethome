@@ -54,3 +54,7 @@ c.register(1500000,1500000) #optimal operation points for charging / discharging
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository before making a change. 
+
+## License
+
+This project is licensed under the LGPL License - see the [LICENSE](LICENSE) file for details
