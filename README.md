@@ -1,4 +1,4 @@
-# ethome
+# ETHome
 
 ETHome is a proof of concept of a blockchain based organization of a local low voltage energy community. The focus of the concept is efficient use of shared resources to minimize external dependence, and not energy trading. A previously proposed control algorithm, which exploits the power dependency of the efficiency of electrical energy storages, is implemented as a smart contract on a private instance of an Ethereum blockchain to coordinate the operation. It is implemented using four connected Raspberry Pis representing the participating households with pre-given electrical load and photovoltaic conversion as well as a battery. Each household runs an Ethereum full node and an interfacing software. Only the energy technology components are simulated, while the blockchain is actually running on the Raspberry Pis in order to mind the full complexity of the technology.
 
