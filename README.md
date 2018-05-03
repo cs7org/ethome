@@ -34,8 +34,8 @@ tx_hash = contract.deploy(transaction={'from': web3.eth.accounts[0], 'gas': 4100
 tx_receipt = web3.eth.getTransactionReceipt(tx_hash)
 contract_address = tx_receipt['contractAddress']
 ```
-* register the participants with their optimal operation points (in mW)
 * adjust the contract and node addresses in addresses.py
+* register all the participants with their optimal operation points (in mW)
 ```
 from web3 import Web3, HTTPProvider
 web3 = Web3(HTTPProvider('http://localhost:xxxx')) # replace xxxx 
