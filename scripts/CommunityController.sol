@@ -2,14 +2,14 @@
 pragma solidity ^0.4.18;
 
 contract CommunityController_v13 {
-    
+	
 	//addresses
 	address public owner;
-    
+	
 	//mappings
 	mapping(address => bool) public registered; //true if address is registered
-    mapping(address => uint) private SOC; //currrent SOC of address 
-    mapping(address => int) private Pres; //current Pres of address (Consumer counting arrow system)
+	mapping(address => uint) private SOC; //currrent SOC of address 
+	mapping(address => int) private Pres; //current Pres of address (Consumer counting arrow system)
 	mapping(address => uint) private PoptCh; //optimal charging operatopn point of address
 	mapping(address => uint) private PoptDch; //optimal discharging operation point of address
 	mapping(uint => address) public RegisteredAddresses;  //address of registered index 
@@ -18,32 +18,32 @@ contract CommunityController_v13 {
 	
 	//other
 	uint public numberOfAdresses=0; //total number of registered addresses
-    
+	
 	//modifiers
-    modifier onlyOwner()
-    {
-        require(msg.sender == owner);
-        _;
-    }
-    
-    modifier onlyRegistered()
-    {
-        require(registered[msg.sender] == true);
-        _;
-    }
+	modifier onlyOwner()
+	{
+		require(msg.sender == owner);
+		_;
+	}
+	
+	modifier onlyRegistered()
+	{
+		require(registered[msg.sender] == true);
+	_;
+	}
 	
 	modifier onlyNonregistered()
 	{
-        require(registered[msg.sender] == false);
-        _;
-    }
+		require(registered[msg.sender] == false);
+		_;
+	}
 	
 	//constructor
 	function CommunityController_v13() public 
-    {
-        owner = msg.sender;
+	{
+		owner = msg.sender;
 		//register(); //register owner 
-    }
+	}
 	
 	//registration/deregistration
 	function register(uint PoptCh_i, uint PoptDch_i) public onlyNonregistered
@@ -115,38 +115,38 @@ contract CommunityController_v13 {
 	}
 	
 	//setters
-    function setSOC(uint _newvalue) public onlyRegistered
-    {
-        SOC[msg.sender] = _newvalue;
-        active[msg.sender] = 9;
-        checkNeighbors();
-    }
-    
-    function setPres(int _newvalue) public onlyRegistered //Consumer counting arrow system
-    {
-        Pres[msg.sender] = _newvalue;
-    }
+	function setSOC(uint _newvalue) public onlyRegistered
+	{
+		SOC[msg.sender] = _newvalue;
+		active[msg.sender] = 9;
+		checkNeighbors();
+	}
+	
+	function setPres(int _newvalue) public onlyRegistered //Consumer counting arrow system
+	{
+		Pres[msg.sender] = _newvalue;
+	}
 	
 	function setPoptCh(uint _newvalue) public onlyRegistered //only at registration / if updated
-    {
-        PoptCh[msg.sender] = _newvalue;
-    }
+	{
+		PoptCh[msg.sender] = _newvalue;
+	}
 	
 	function setPoptDch(uint _newvalue) public onlyRegistered //only at registration / if updated
-    {
-        PoptDch[msg.sender] = _newvalue;
-    }
-    
+	{
+		PoptDch[msg.sender] = _newvalue;
+	}
+	
 	//getters
-    function readSOC(address _a) public onlyRegistered view returns (uint) 
-    {
-        return SOC[_a];
-    }
+	function readSOC(address _a) public onlyRegistered view returns (uint) 
+	{
+		return SOC[_a];
+	}
 	
 	function readPres(address _a) public onlyRegistered view returns (int) 
-    {
-        return Pres[_a];
-    }
+	{
+		return Pres[_a];
+	}
 	
 	function readInstruction() public onlyRegistered view returns (int)
 	{
