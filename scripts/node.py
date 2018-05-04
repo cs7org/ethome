@@ -71,7 +71,7 @@ while dataPV.valuesLeft() and dataHH.valuesLeft():
             counter+=timeStep
             if counter >12:
                 #either post current value or moving average 
-                c.postStatus(Pres,b.SOC()) 
+                c.postStatus(int(Pres),b.SOC()) 
                 #c.postStatus(int(mean(mAvg)),b.SOC()) #post mean of moving average in order to avoid posting a momentary peak
                 counter=7
         noUsers = c.getNoUsers()
