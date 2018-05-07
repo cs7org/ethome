@@ -10,7 +10,7 @@ https://doi.org/3208903.3208929
 Follow these steps to quickly set up the project yourself. 
 * make sure you have Python3, Web3.py and geth installed (tested with Python 3.5.3, web3 4.0.0b5 and geth 1.7.3)
 * make sure you have your private Ethereum network or any test network up and running with a couple of nodes. In our case we used 4 Rasperry Pis in order to represent 4 participating houses and a private Ethereum chain with Proof-of-Authority as consensus mechanism. [This](http://chainskills.com/2017/02/24/create-a-private-ethereum-blockchain-with-iot-devices-16/) is a good instruction how to set up a private chain.
-* deploy the smart contract ([CommunityController.sol](https://github.com/cs7org/ethome/blob/master/scripts/CommunityController.sol))
+* deploy the smart contract ([CommunityController.sol](https://github.com/cs7org/ethome/blob/master/scripts/CommunityController.sol)) e.g. via solc
 ```
 import json
 from solc import compile_source
