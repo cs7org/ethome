@@ -4,7 +4,7 @@ ETHome is a proof of concept of a blockchain based organization of a local low v
 
 More info and evaluation of the concept can be found in the original paper:
 Jonas Schlund, Lorenz Ammon and Reinhard German, “ETHome: Open-source blockchain based energy community controller,” Ninth ACM International Conference on Future Energy Systems (ACM e-Energy), June 12-15 2018
-https://doi.org/3208903.3208929
+https://doi.org/10.1145/3208903.3208929
 
 ## Quickstart
 Follow these steps to quickly set up the project yourself. 
