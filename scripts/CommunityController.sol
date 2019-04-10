@@ -1,4 +1,3 @@
-//@author: Jonas Schlund
 pragma solidity ^0.4.18;
 
 contract CommunityController_v13 {
