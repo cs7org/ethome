@@ -82,10 +82,10 @@ class battery(object):
 		return self.Elosses_idle_internal
 	def E_losses_idle_external(self):
 		return self.Elosses_idle_external
-	def Popt_charge(self): #TODO: make parameterizable
-		return 1500000
-	def Popt_discharge(self): #TODO: make parameterizable
-		return 1500000
+	def Popt_charge(self):
+		return int(self.Pmax_ch_id/2)
+	def Popt_discharge(self):
+		return int(self.Pmax_dch/2)
 	def __del__(self):
 		pass
 """
