@@ -322,4 +322,4 @@ contract CommunityController_v13 {
 		}
 		return arr;
 	}
-\
+}
